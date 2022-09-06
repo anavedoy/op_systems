@@ -1,0 +1,3 @@
+> analise de bernstein: se preocupar apenas com variaveis globais, locais nao dao problema
+                        mas cuidar com variavel locais estaticas
+                            (poisvariaveis globais que so tem visao dentro de uma funcao).
