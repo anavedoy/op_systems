@@ -9,6 +9,7 @@ void *PrintHello(void *arg) {
     printf("Alo da thread %ld\n", tid);
     printf("Retornando %ld\n", tid*tid);
     printf("\n");
+    return (long int *) (long int)2;
     pthread_exit(NULL);
 }
 
@@ -18,10 +19,12 @@ int main (int argc, char *argv[]) {
     
     int rc;
     long t;
+
+    long int *teste;
     
     for (t=0; t<NUM_THREADS; t++){
         
-        printf("main: criando thread %ld\n", t);
+        printf("main: criando thread %li\n", (long int)teste);
         
         rc = pthread_create(&threads[t], 
                             NULL, 
