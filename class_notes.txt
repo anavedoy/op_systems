@@ -1,3 +1,9 @@
 > analise de bernstein: se preocupar apenas com variaveis globais, locais nao dao problema
                         mas cuidar com variavel locais estaticas
                             (poisvariaveis globais que so tem visao dentro de uma funcao).
+
+> desabilitaçao por interrupção: apenas com uma unica CPU, pois multi processadores nao funcionam pra essa solução.
+
+> variaveis de impedimento (lock): solução sujeita a condiçao de disputa (executar uma logica assim é complicado)
+    lock = 0 : regiao critica livre
+    lock = 1 : regiao critica ocupada
