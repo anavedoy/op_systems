@@ -7,3 +7,9 @@
 > variaveis de impedimento (lock): solução sujeita a condiçao de disputa (executar uma logica assim é complicado)
     lock = 0 : regiao critica livre
     lock = 1 : regiao critica ocupada
+
+> alternancia obrigatoria: tem problema na condiçao 3. mas é ok. critical_region() e noncritical_region()
+
+> solucao de peterson: lock e alternancia obrigatoria juntas. variavel(dizer quem esta usando) e vetor.
+
+solucções de exclusao mutua baseadas em espera ocupada sao indesejaveis, processos se atraplham entre si.
