@@ -10,6 +10,8 @@
 
 > alternancia obrigatoria: tem problema na condiçao 3. mas é ok. critical_region() e noncritical_region()
 
-> solucao de peterson: lock e alternancia obrigatoria juntas. variavel(dizer quem esta usando) e vetor.
+> solucao de peterson: lock e alternancia obrigatoria juntas. variavel(dizer quem esta usando) e vetor. funciona.
 
 solucções de exclusao mutua baseadas em espera ocupada sao indesejaveis, processos se atraplham entre si.
+
+na pratica desabilitaçao de interrupção e instrução TSL.
