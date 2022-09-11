@@ -12,6 +12,6 @@ void aplicacao(){
 }
 
 void main(){
-    sem_t m = 1;
+    sem_t m;
 
 }
