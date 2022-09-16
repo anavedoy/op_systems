@@ -1,3 +1,3 @@
 # op_systems
 
-### Directory dedicated to my algorithms of Operation Systems class in college.
+### Directory dedicated to algorithms used in my Operation Systems class in college.
