@@ -1,3 +1,5 @@
+anotações de aula da disciplina de sistemas operacionais:
+
 > analise de bernstein: se preocupar apenas com variaveis globais, locais nao dao problema
                         mas cuidar com variavel locais estaticas
                             (poisvariaveis globais que so tem visao dentro de uma funcao).
@@ -15,3 +17,51 @@
 solucções de exclusao mutua baseadas em espera ocupada sao indesejaveis, processos se atraplham entre si.
 
 na pratica desabilitaçao de interrupção e instrução TSL.
+
+
+[20/09/2022]
+
+MUTEXES -> exclusao mutua
+VAR CONDIÇÃO -> sincronização
+BARREIRAS -> sincronização
+
+
+processos nao compartilham memoria -> criação de memoria compartilhada
+    shm_open() : nome da funcao pra criar memoria compartilhada
+
+    nmap() : mapeia o tamanho de bytes do arquivo fd na memoria iniciando em offset
+    
+    > etapas de criação de memoria compartilhada:
+        > obter descritor de arquivo
+        > definir tamanho do objeto
+        > mapear objeto na memoria e obter um ponteiro para ele
+    
+    > precisa se preocupar:
+        > nome da regiao que vao compartilhar "/shm"
+        > tamanho da regiao que vao compartilhar
+            exemplo: 200 * sizeof(int) [200 inteiros]
+
+
+
+semaforos POSIX (unix):
+    > criação:
+        sem_open(): criar semaforo
+        sem_init(): inicializar o semaforo
+    > uso:
+        sem_wait()
+        sem_post()
+    > liberação:
+        sem_destroy()
+        sem_close()
+        [tem outro, ver no slide]
+
+    > semaforos anonimos e nomeados:
+        > named e unnamed: a diferença é que nomeados tem arquivo associado
+    
+    > criaçao de semaforos nomeados:
+        > sem_t * sem_open(const char *name, int oflag);
+    > criaçao de semaforos anonimos:
+        int sem_init();
+        
+        > sem_wait ()
+        > sem_post()
