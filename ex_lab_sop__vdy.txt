@@ -1,0 +1,6 @@
+1) numero de blocos e tamanho definido por debugfs stats:
+	Inode count:              12288
+	Block count:              24576
+	Block size:               2048
+2)
+
