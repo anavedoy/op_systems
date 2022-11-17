@@ -1,6 +1,23 @@
+
 1) numero de blocos e tamanho definido por debugfs stats:
-	Inode count:              12288
-	Block count:              24576
-	Block size:               2048
-2)
+        Inode count:              12288
+        Block count:              24576
+        Block size:               2048
+
+2) Dois grupos:
+        Directories:              2
+                Group  0: block bitmap at 25, inode bitmap at 26, inode table at 27
+                          15934 free blocks, 6125 free inodes, 2 used directories
+                Group  1: block bitmap at 16409, inode bitmap at 16410, inode table at 16411
+                          7781 free blocks, 6144 free inodes, 0 used directories
+   Qual o tamanho?
+        GRUPO 0:
+                quantidade de blocos por grupo - quantidade de free blocks = 16384 - 15934 = 450
+                450 * 2048 = 921.600 bytes
+        GRUPO 1:
+                (16384 - 7781) * 2048 = 17.618.944 bytes
+   O grupo mais ocupado é o grupo 1.
+
+3)
+
 
